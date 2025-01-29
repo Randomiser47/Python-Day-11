@@ -3,7 +3,6 @@ import random
 print(art.logo1)
 print("Welcome to chroma clash")
 
-# Example for Red cards:
 Red = [
     ("Red", "0"),
     ("Red", "1"), ("Red", "1"),
@@ -77,7 +76,12 @@ Wild = [
 # Combine all cards into a single deck list:
 deck = Red + Blue + Green + Yellow + Wild
 random.shuffle(deck)
-print(deck)
+
 player_hand = deck[0:7]
 computer_hand = deck[7:14]
 remaining_deck = deck[14:]
+
+print(player_hand)
+print(computer_hand)
+
+    
