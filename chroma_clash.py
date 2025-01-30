@@ -75,13 +75,33 @@ Wild = [
 
 # Combine all cards into a single deck list:
 deck = Red + Blue + Green + Yellow + Wild
-random.shuffle(deck)
+# random.shuffle(deck)
 
 player_hand = deck[0:7]
 computer_hand = deck[7:14]
-remaining_deck = deck[14:]
+top_card = deck[14]
+remaining_deck = deck[15:]
 
-print(player_hand)
-print(computer_hand)
+player_card = [("Red","2")]
+computer_card = [("yellow","2")]
 
-    
+
+def is_valid(player_card,computer_card):
+    top_card_color = top_card[0]
+    player_card_color = player_card[0]
+    computer_card_color = computer_card[0]
+    if top_card_color in player_card_color:
+        print("turn is for player")
+    if top_card_color in computer_card:
+        print("turn is valid for computer")
+    else:
+        print("turn is not valid for computer")
+# while not player_hand or computer_hand:
+#     print(f"Card on top{top_card}")
+
+
+is_valid(player_card=player_card,computer_card=computer_card)
+# if computer_hand == []:
+#     print("You've lost to the computer!, Computer wins!!!")
+# elif player_hand == []:
+#     print("You have defeated the computer sucessfully. Congratulations. Player Wins!!!")
